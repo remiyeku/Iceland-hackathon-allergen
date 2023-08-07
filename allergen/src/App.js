@@ -1,8 +1,7 @@
-
 import "./App.css";
-import ProductList from "./components/Product/product-list";
+import ProductList from "./Components/Product/product-list";
 import React, { useState } from "react";
-import Filter from "./components/Fillter/Filter";
+import Filter from "./Components/Fillter/Filter";
 
 function App() {
   const [activeAllergies, setActiveAllergies] = useState([]);
@@ -11,7 +10,6 @@ function App() {
       <Filter activeAllergies={activeAllergies} />;
       <ProductList />
     </>
-    
   );
 }
 
