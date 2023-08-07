@@ -4,9 +4,9 @@ import React, { useState } from "react";
 import Filter from "./components/Fillter/Filter";
 import productArray from "./db.js";
 
-
 function App() {
-  const [activeAllergies, setActiveAllergies] = useState([]);
+  const [activeAllergens, setActiveAllergens] = useState([]);
+
   return (
     <>
       <Filter activeAllergies={activeAllergies} />;
