@@ -2,7 +2,7 @@ import React from "react";
 import ButtonList from "./ButtonList";
 import SearchBar from "./SearchBar";
 
-function Filter({ activeAllergens, setActiveAllergens }) {
+function Filter({ activeAllergens, setActiveAllergens, allergens, setAllergens }) {
   function updateAllergen(allergen) {
     allergen = allergen.toLowerCase();
     if (activeAllergens.includes(allergen)) {
@@ -19,10 +19,14 @@ function Filter({ activeAllergens, setActiveAllergens }) {
       <ButtonList
         activeAllergens={activeAllergens}
         updateAllergen={updateAllergen}
+        allergens={allergens}
+        setAllergens={setAllergens}
       />
       <SearchBar
         updateAllergen={updateAllergen}
         activeAllergens={activeAllergens}
+        allergens={allergens}
+        setAllergens={setAllergens}
       />
     </div>
   );

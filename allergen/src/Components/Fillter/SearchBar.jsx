@@ -1,6 +1,11 @@
 import React, { useState } from "react";
 
-function SearchBar({ updateAllergen, activeAllergens }) {
+function SearchBar({
+  updateAllergen,
+  activeAllergens,
+  allergens,
+  setAllergens,
+}) {
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSearch(e) {
@@ -8,6 +13,9 @@ function SearchBar({ updateAllergen, activeAllergens }) {
   }
 
   function handleClick() {
+    if (!allergens.includes(searchTerm.toLowerCase())) {
+      setAllergens([...allergens, searchTerm]);
+    }
     if (!activeAllergens.includes(searchTerm.toLowerCase())) {
       updateAllergen(searchTerm);
     }

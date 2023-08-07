@@ -1,15 +1,5 @@
-function ButtonList({ activeAllergens, updateAllergen }) {
-  const allergens = [
-    "milk",
-    "eggs",
-    "wheat",
-    "soy",
-    "peanuts",
-    "tree nuts",
-    "fish",
-    "shellfish",
-    "sesame",
-  ];
+function ButtonList({ activeAllergens, updateAllergen, allergens, setAllergens }) {
+
 
   return (
     <div>
