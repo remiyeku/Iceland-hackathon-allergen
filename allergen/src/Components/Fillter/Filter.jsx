@@ -2,10 +2,10 @@ import React from "react";
 import ButtonList from "./ButtonList";
 import SearchBar from "./SearchBar";
 
-function Filter() {
+function Filter({activeAllergens}) {
   return (
     <div>
-      <ButtonList />
+      <ButtonList activeAllergens={activeAllergens} />
       <SearchBar />
     </div>
   );
