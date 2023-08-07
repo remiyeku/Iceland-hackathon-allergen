@@ -3,10 +3,15 @@ import "./App.css";
 import Filter from "./Components/Fillter/Filter";
 
 function App() {
-  const [activeAllergies, setActiveAllergies] = useState([]);
+  const [activeAllergens, setActiveAllergens] = useState([]);
+
   return (
     <>
-      <Filter activeAllergies={activeAllergies} />;
+      <Filter
+        activeAllergens={activeAllergens}
+        setActiveAllergens={setActiveAllergens}
+      />
+      ;
     </>
   );
 }
