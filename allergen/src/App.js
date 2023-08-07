@@ -24,7 +24,6 @@ function App() {
         activeAllergens={activeAllergens}
         setActiveAllergens={setActiveAllergens}
       />
-      ;
     </>
   );
 }

@@ -1,16 +1,25 @@
-function ButtonList({ activeAllergens, updateAllergen, allergens, setAllergens }) {
+import { Button } from "@mui/material";
 
-
+function ButtonList({
+  activeAllergens,
+  updateAllergen,
+  allergens,
+  setAllergens,
+}) {
   return (
     <div>
       {allergens.map((allergen) => (
-        <button
+        <Button
+          variant={
+            activeAllergens.includes(allergen) ? "contained" : "outlined"
+          }
+          key={allergen}
           allergen={allergen}
-          className={activeAllergens.includes(allergen) ? "active" : "inactive"}
+          //   className={activeAllergens.includes(allergen) ? "active" : "inactive"}
           onClick={() => updateAllergen(allergen)}
         >
           {allergen}
-        </button>
+        </Button>
       ))}
     </div>
   );

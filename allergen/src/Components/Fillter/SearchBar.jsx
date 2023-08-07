@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Button, TextField } from "@mui/material";
 
 function SearchBar({
   updateAllergen,
@@ -13,6 +14,7 @@ function SearchBar({
   }
 
   function handleClick() {
+    if (searchTerm === "") return;
     if (!allergens.includes(searchTerm.toLowerCase())) {
       setAllergens([...allergens, searchTerm]);
     }
@@ -24,8 +26,8 @@ function SearchBar({
 
   return (
     <div>
-      <input type="text" onChange={handleSearch} value={searchTerm} />
-      <button onClick={handleClick}>Search</button>
+      <TextField type="text" onChange={handleSearch} value={searchTerm} />
+      <Button onClick={handleClick}>Search</Button>
     </div>
   );
 }
