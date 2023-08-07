@@ -1,6 +1,6 @@
 import React from "react";
 
-function ButtonList({ activeAllergens }) {
+function ButtonList({ activeAllergens, updateAllergen }) {
   const allergens = [
     "milk",
     "eggs",
@@ -13,14 +13,13 @@ function ButtonList({ activeAllergens }) {
     "sesame",
   ];
 
-  function handleClick() {}
-
   return (
     <div>
       {allergens.map((allergen) => (
         <button
+          allergen={allergen}
           className={activeAllergens.includes(allergen) ? "active" : "inactive"}
-          onClick={handleClick}
+          onClick={() => updateAllergen(allergen)}
         >
           {allergen}
         </button>
