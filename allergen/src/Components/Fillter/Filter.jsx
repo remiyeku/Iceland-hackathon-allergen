@@ -4,6 +4,7 @@ import SearchBar from "./SearchBar";
 
 function Filter({ activeAllergens, setActiveAllergens }) {
   function updateAllergen(allergen) {
+    allergen = allergen.toLowerCase();
     if (activeAllergens.includes(allergen)) {
       setActiveAllergens(
         activeAllergens.filter(
@@ -19,7 +20,10 @@ function Filter({ activeAllergens, setActiveAllergens }) {
         activeAllergens={activeAllergens}
         updateAllergen={updateAllergen}
       />
-      <SearchBar updateAllergen={updateAllergen} />
+      <SearchBar
+        updateAllergen={updateAllergen}
+        activeAllergens={activeAllergens}
+      />
     </div>
   );
 }
