@@ -1,5 +1,4 @@
 import { Button } from "@mui/material";
-
 function ButtonList({
   activeAllergens,
   updateAllergen,
@@ -15,6 +14,7 @@ function ButtonList({
           }
           key={allergen}
           allergen={allergen}
+          style={{ margin: "5px" }}
           //   className={activeAllergens.includes(allergen) ? "active" : "inactive"}
           onClick={() => updateAllergen(allergen)}
         >
