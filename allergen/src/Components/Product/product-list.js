@@ -1,4 +1,5 @@
 import React from "react";
+import "./product.css";
 
 const ProductList = ({ data }) => {
   return (
@@ -7,7 +8,11 @@ const ProductList = ({ data }) => {
         <div key={i} className="box">
           <div className="product-container">
             <div className="product-card">
-              <img className="product-image" src={product.image} alt={product.name} />
+              <img
+                className="product-image"
+                src={product.image}
+                alt={product.name}
+              />
               <div className="product-info">
                 <h2 className="product-title">{product.name}</h2>
                 <p className="product-description">
