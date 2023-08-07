@@ -10,8 +10,7 @@ function Filter({ activeAllergens, setActiveAllergens }) {
           (existingAllergen) => existingAllergen !== allergen
         )
       );
-      console.log(activeAllergens);
-    } else setActiveAllergens(...activeAllergens, allergen);
+    } else setActiveAllergens([...activeAllergens, allergen]);
     console.log(activeAllergens);
   }
   return (

@@ -1,5 +1,3 @@
-import React from "react";
-
 function ButtonList({ activeAllergens, updateAllergen }) {
   const allergens = [
     "milk",
