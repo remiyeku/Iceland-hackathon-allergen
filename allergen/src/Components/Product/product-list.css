@@ -1,9 +1,11 @@
 @media screen and (max-width: 412px) {
+
     .repeat {
         display: flex;
         flex-direction: column;
         background-color: blue;
         width: 100%;
+        padding-top: 20px;
     }
     .product-container {    
         padding-bottom: 20px;
