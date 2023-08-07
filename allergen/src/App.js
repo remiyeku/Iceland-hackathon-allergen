@@ -2,7 +2,11 @@ import "./App.css";
 import ProductList from "./Components/Product/product-list";
 import React, { useState } from "react";
 import Filter from "./Components/Fillter/Filter";
+
 import productArray from "./db.js";
+
+import Header from "./Components/Header/Header";
+import Footer from "./Components/Footer/Footer";
 
 function App() {
   const [activeAllergens, setActiveAllergens] = useState([]);
@@ -20,13 +24,19 @@ function App() {
 
   return (
     <>
+      <Header />
       <Filter
         allergens={allergens}
         setAllergens={setAllergens}
         activeAllergens={activeAllergens}
         setActiveAllergens={setActiveAllergens}
       />
+
       <ProductList data={productArray} activeAllergens={activeAllergens} />
+
+
+      <Footer />
+
     </>
   );
 }
