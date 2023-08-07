@@ -1,12 +1,17 @@
-import logo from "./logo.svg";
+
 import "./App.css";
 import ProductList from "./components/product-list";
+import React, { useState } from "react";
+import Filter from "./Components/Fillter/Filter";
 
 function App() {
+  const [activeAllergies, setActiveAllergies] = useState([]);
   return (
-    <div className="App">
+    <>
+      <Filter activeAllergies={activeAllergies} />;
       <ProductList />
-    </div>
+    </>
+    
   );
 }
 
