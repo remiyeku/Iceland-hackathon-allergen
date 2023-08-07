@@ -1,26 +1,25 @@
-function ButtonList({ activeAllergens, updateAllergen }) {
-  const allergens = [
-    "milk",
-    "eggs",
-    "wheat",
-    "soy",
-    "peanuts",
-    "tree nuts",
-    "fish",
-    "shellfish",
-    "sesame",
-  ];
-
+import { Button } from "@mui/material";
+function ButtonList({
+  activeAllergens,
+  updateAllergen,
+  allergens,
+  setAllergens,
+}) {
   return (
     <div>
       {allergens.map((allergen) => (
-        <button
+        <Button
+          variant={
+            activeAllergens.includes(allergen) ? "contained" : "outlined"
+          }
+          key={allergen}
           allergen={allergen}
-          className={activeAllergens.includes(allergen) ? "active" : "inactive"}
+          style={{ margin: "5px" }}
+          //   className={activeAllergens.includes(allergen) ? "active" : "inactive"}
           onClick={() => updateAllergen(allergen)}
         >
           {allergen}
-        </button>
+        </Button>
       ))}
     </div>
   );

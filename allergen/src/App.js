@@ -5,11 +5,28 @@ import Filter from "./Components/Fillter/Filter";
 import productArray from "./db.js";
 
 function App() {
-  //const [activeAllergens, setActiveAllergens] = useState([]);
+  const [activeAllergens, setActiveAllergens] = useState([]);
+  const [allergens, setAllergens] = useState([
+    "milk",
+    "eggs",
+    "wheat",
+    "soy",
+    "peanuts",
+    "tree nuts",
+    "fish",
+    "shellfish",
+    "sesame",
+  ]);
 
   return (
     <>
-      <ProductList data={productArray} />
+      <Filter
+        allergens={allergens}
+        setAllergens={setAllergens}
+        activeAllergens={activeAllergens}
+        setActiveAllergens={setActiveAllergens}
+ />
+  <ProductList data={productArray} />
     </>
   );
 }
