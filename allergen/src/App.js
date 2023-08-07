@@ -1,8 +1,8 @@
 
 import "./App.css";
-import ProductList from "./components/product-list";
+import ProductList from "./components/Product/product-list";
 import React, { useState } from "react";
-import Filter from "./Components/Fillter/Filter";
+import Filter from "./components/Fillter/Filter";
 
 function App() {
   const [activeAllergies, setActiveAllergies] = useState([]);
