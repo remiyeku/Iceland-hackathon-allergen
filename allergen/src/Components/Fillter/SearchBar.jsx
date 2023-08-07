@@ -7,6 +7,7 @@ function SearchBar({
   allergens,
   setAllergens,
 }) {
+  //
   const [searchTerm, setSearchTerm] = useState("");
 
   function handleSearch(e) {
