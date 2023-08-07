@@ -18,7 +18,7 @@ const ProductList = ({ data }) => {
                 <p className="product-description">
                   Allergies: {product.allergies.join(", ")}
                 </p>
-                <p className="product-price">${product.prices.toFixed(2)}</p>
+                <p className="product-price">£{product.prices}</p>
               </div>
             </div>
           </div>
