@@ -1,10 +1,18 @@
 import React from "react";
 import "./product-list.css";
 
-const ProductList = ({ data }) => {
+const ProductList = ({ data, activeAllergens }) => {
+  const filteredData = data.filter((product) => {
+ for (let i = 0; i < activeAllergens.length; i++) {
+      if (product.allergies.includes(activeAllergens[i])) {
+        return false;
+      }
+    }
+     return true})
+
   return (
     <div className="repeat">
-      {data.map((product, i) => (
+      {filteredData.map((product, i) => (
         <div key={i} className="box">
           <div className="product-container">
             <div className="product-card">

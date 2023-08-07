@@ -11,7 +11,7 @@ import Footer from "./Components/Footer/Footer";
 function App() {
   const [activeAllergens, setActiveAllergens] = useState([]);
   const [allergens, setAllergens] = useState([
-    "milk",
+    "dairy",
     "eggs",
     "wheat",
     "soy",
@@ -31,9 +31,12 @@ function App() {
         activeAllergens={activeAllergens}
         setActiveAllergens={setActiveAllergens}
       />
-      <ProductList data={productArray} />
+
+      <ProductList data={productArray} activeAllergens={activeAllergens} />
+
 
       <Footer />
+
     </>
   );
 }
