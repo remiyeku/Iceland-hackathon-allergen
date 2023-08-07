@@ -7,7 +7,7 @@ import productArray from "./db.js";
 function App() {
   const [activeAllergens, setActiveAllergens] = useState([]);
   const [allergens, setAllergens] = useState([
-    "milk",
+    "dairy",
     "eggs",
     "wheat",
     "soy",
@@ -25,8 +25,8 @@ function App() {
         setAllergens={setAllergens}
         activeAllergens={activeAllergens}
         setActiveAllergens={setActiveAllergens}
- />
-  <ProductList data={productArray} />
+      />
+      <ProductList data={productArray} activeAllergens={activeAllergens} />
     </>
   );
 }
